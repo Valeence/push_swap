@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:27:44 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 18:47:47 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/27 13:01:07 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ int	main(int argc, char **argv)
 		sort_three(&stack_a);
 	if (stack_len(stack_a) > 3)
 		radix_sort(&stack_a, &stack_b);
+	free_stack(&stack_a, &stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:25:57 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 14:59:24 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/21 18:25:03 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,5 @@ void	init_stack_a(t_stack_node **stack_a, char **argv, int i)
 		append_node(stack_a, nb);
 		i++;
 	}
+	get_index(stack_a);
 }

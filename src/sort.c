@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 17:50:19 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 18:50:19 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/24 17:07:54 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	radix_sort(t_stack_node **stack_a, t_stack_node **stack_b)
 		return ;
 	}
 	max_bits = get_bit_max_list(stack_a);
-	printf("max_bits = %d\n", max_bits);
 	while (i < max_bits)
 	{
 		radix_sort_bit(stack_a, stack_b, i);

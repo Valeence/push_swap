@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 02:33:19 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/15 15:25:32 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/27 13:00:58 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,24 @@ void	check_duplicate(t_stack_node *stack_a, int nb)
 		stack_a = (stack_a)->next;
 	}
 	return ;
+}
+
+void	free_stack(t_stack_node **stack_a, t_stack_node **stack_b)
+{
+	t_stack_node	*tmp;
+
+	if (!stack_a || !stack_b)
+		return ;
+	while (*stack_a)
+	{
+		tmp = (*stack_a)->next;
+		free(*stack_a);
+		*stack_a = tmp;
+	}
+	while (*stack_b)
+	{
+		tmp = (*stack_b)->next;
+		free(*stack_b);
+		*stack_b = tmp;
+	}
 }
