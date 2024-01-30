@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 17:31:54 by vandre            #+#    #+#             */
-/*   Updated: 2023/10/19 14:35:28 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 14:11:44 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, end - start + 1);
 	return (str);
 }
-
-// int	main()
-// {
-// 	char *s1 = "  bonjour a tous comment ca va  ";
-// 	char *set = " ";
-// 	printf("%s\n", ft_strtrim(s1, set));
-// }

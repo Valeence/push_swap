@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:52:21 by vandre            #+#    #+#             */
-/*   Updated: 2023/10/19 14:34:35 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 14:11:27 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// int     main(void)
-// {
-//     char    str[] = "Hello World!";
-
-//     /* Applique la fonction ft_test() à chaque caractère de la chaîne */
-//     ft_striteri(str, &ft_test);
-
-//     /* Affiche la chaîne de caractères modifiée */
-//     printf("%s\n", str);
-
-//     return (0);
-// }

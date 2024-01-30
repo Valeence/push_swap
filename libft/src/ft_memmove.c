@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 02:21:52 by vandre            #+#    #+#             */
-/*   Updated: 2023/10/19 14:33:46 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 14:11:05 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int main(void)
-// {
-//    char str1[] = "Hello World!";
-//    char str2[] = "Goodbye";
-
-//    printf("Before memmove str1 = %s, str2 = %s\n", str1, str2);
-
-//    /* Copie les5 premiers caractères de str1 dans str2 */
-//    ft_memmove(str2, str1, 7);
-
-//    printf("After memmove str1 = %s, str2 = %s\n", str1, str2);
-//    return (0);
-// }

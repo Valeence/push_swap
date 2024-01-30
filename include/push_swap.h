@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 16:56:01 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/27 13:01:18 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 17:07:22 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,16 @@ typedef struct s_stack_node
 }				t_stack_node;
 
 void	init_stack_a(t_stack_node **stack_a, char **argv, int i);
-void	check_argv(char	*str);
+int		check_argv(char	*str);
 void	check_duplicate(t_stack_node *stack_a, int nb);
 void	append_node(t_stack_node **stack, int nb);
 int		stack_len(t_stack_node *stack);
 int		is_sorted(t_stack_node **stack_a);
 void	get_index(t_stack_node **stack);
 void 	free_stack(t_stack_node **stack_a, t_stack_node **stack_b);
+void	free_sa(t_stack_node **stack_a);
+void	errors(t_stack_node **stack_a);
+
 
 void	sort_two(t_stack_node **stack_a);
 void	sort_three(t_stack_node **stack_a);

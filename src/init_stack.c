@@ -6,11 +6,23 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:25:57 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/21 18:25:03 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 17:13:22 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void free_argv(char **argv)
+{
+	int i;
+
+	i = 0;
+	while (argv[i])
+	{
+		free(argv[i]);
+		i++;
+	}
+}
 
 void	append_node(t_stack_node **stack_a, int nb)
 {
@@ -32,7 +44,7 @@ void	append_node(t_stack_node **stack_a, int nb)
 	else
 	{
 		last_node = find_last(*stack_a);
-		last_node->next = node; 
+		last_node->next = node;
 		node->prev = last_node;
 	}
 }
@@ -43,10 +55,18 @@ void	init_stack_a(t_stack_node **stack_a, char **argv, int i)
 
 	while (argv[i])
 	{
-		check_argv(argv[i]);
-		ft_atoi(argv[i], &nb);
-		if (nb > INT_MAX || nb < INT_MIN)
-			return (ft_printf("Error\n"), exit(1));
+		if (check_argv(argv[i]))
+		{
+			free_argv(argv);
+			errors(stack_a);
+			return ;
+		}
+		if (!ft_atoi(argv[i], &nb))
+		{
+			free(*argv);
+			errors(stack_a);
+			return ;
+		}
 		check_duplicate(*stack_a, nb);
 		append_node(stack_a, nb);
 		i++;

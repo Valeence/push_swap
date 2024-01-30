@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 22:29:18 by vandre            #+#    #+#             */
-/*   Updated: 2023/10/19 14:32:30 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 14:10:48 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (s);
 }
-// #include <string.h>
-// int	main(void)
-// {
-// 	printf("%s", ft_itoa(0));
-// }

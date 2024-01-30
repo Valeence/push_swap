@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 19:59:42 by vandre            #+#    #+#             */
-/*   Updated: 2023/10/19 14:34:09 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 14:13:37 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd(nbr % 10 + '0', fd);
 }
-
-// int	main()
-// {
-// 	ft_putnbr_fd(5435, 1);
-//}
