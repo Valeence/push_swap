@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 12:40:43 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 14:10:57 by vandre           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:33:30 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	char str[] = "Hello Words";
+	size_t len = sizeof(str);
+	char *result = ft_memchr(str, 'W', len);
+
+	printf("%s, %zu, %c\n", str, len, *result);
+	return (0);
+}*/

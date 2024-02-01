@@ -6,13 +6,13 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 19:10:47 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 17:56:39 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:21:07 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_stack_node	*find_last(t_stack_node *stack_a)
+t_stack	*find_last(t_stack *stack_a)
 {
 	if (!stack_a)
 		return (NULL);
@@ -21,24 +21,24 @@ t_stack_node	*find_last(t_stack_node *stack_a)
 	return (stack_a);
 }
 
-t_stack_node *find_max(t_stack_node *stack)
+t_stack *find_max(t_stack *stack)
 {
-	t_stack_node *max_node;
+	t_stack *max;
 
 	if (!stack)
 		return (NULL);
-	max_node = stack;
+	max = stack;
 	while (stack)
 	{
-		if (stack->value > max_node->value)
-			max_node = stack;
+		if (stack->value > max->value)
+			max = stack;
 		stack = stack->next;
 	}
-	return (max_node);
+	return (max);
 }
 
 
-int	stack_len(t_stack_node *stack)
+int	stack_len(t_stack *stack)
 {
 	int i;
 
@@ -51,9 +51,9 @@ int	stack_len(t_stack_node *stack)
 	return (i);
 }
 
-int	is_sorted(t_stack_node **stack_a)
+int	is_sorted(t_stack **stack_a)
 {
-	t_stack_node	*current;
+	t_stack	*current;
 
 	if (*stack_a == NULL)
 		return (1);

@@ -6,16 +6,16 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 03:29:29 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/18 01:15:49 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:20:19 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ra(t_stack_node **stack_a)
+void	ra(t_stack **stack_a)
 {
-	t_stack_node	*tmp;
-	t_stack_node	*last;
+	t_stack	*tmp;
+	t_stack	*last;
 
 	if (!*stack_a || !(*stack_a)->next)
 		return ;
@@ -27,10 +27,10 @@ void	ra(t_stack_node **stack_a)
 	ft_printf("ra\n");
 }
 
-void	rb(t_stack_node **stack_b)
+void	rb(t_stack **stack_b)
 {
-	t_stack_node	*tmp;
-	t_stack_node	*last;
+	t_stack	*tmp;
+	t_stack	*last;
 
 	if (!*stack_b || !(*stack_b)->next)
 		return ;
@@ -42,7 +42,7 @@ void	rb(t_stack_node **stack_b)
 	ft_printf("rb\n");
 }
 
-void	rr(t_stack_node **stack_a, t_stack_node **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
 	ra(stack_a);
 	rb(stack_b);

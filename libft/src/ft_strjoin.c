@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:48:16 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 14:13:09 by vandre           ###   ########.fr       */
+/*   Updated: 2023/11/12 14:56:08 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		free((char *)s1);
 	return (str);
 }
+/*
+int	main(void)
+{
+	char s1[] = "Hello";
+	char s2[] = "World";
+	char	*str;
+
+	str = ft_strjoin(s1, s2);
+	if (!str)
+		return (1);
+
+	printf("%s\n", str);
+	return (0);
+}*/

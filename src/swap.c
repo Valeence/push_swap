@@ -6,15 +6,15 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 21:40:00 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 15:02:13 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:20:54 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	pa(t_stack_node **stack_a, t_stack_node **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!*stack_b)
 		return ;
@@ -25,9 +25,9 @@ void	pa(t_stack_node **stack_a, t_stack_node **stack_b)
 	ft_printf("pa\n");
 }
 
-void	pb(t_stack_node **stack_a, t_stack_node **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!*stack_a)
 		return ;
@@ -38,9 +38,9 @@ void	pb(t_stack_node **stack_a, t_stack_node **stack_b)
 	ft_printf("pb\n");
 }
 
-void	sa(t_stack_node **stack_a)
+void	sa(t_stack **stack_a)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!*stack_a || !(*stack_a)->next)
 		return ;
@@ -51,9 +51,9 @@ void	sa(t_stack_node **stack_a)
 	ft_printf("sa\n");
 }
 
-void	sb(t_stack_node **stack_b)
+void	sb(t_stack **stack_b)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!*stack_b || !(*stack_b)->next) 
 		return ;
@@ -64,7 +64,7 @@ void	sb(t_stack_node **stack_b)
 	ft_printf("sb\n");
 }
 
-void	ss(t_stack_node **stack_a, t_stack_node **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	sa(stack_a);
 	sb(stack_b);

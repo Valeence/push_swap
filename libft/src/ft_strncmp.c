@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:22:46 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 14:13:03 by vandre           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:35:10 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,12 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	char	s1[] = "bonjour";
+	char	s2[] = "bonjour";
+	unsigned int n = 4;
+
+	printf("%d", ft_strncmp(s1, s2, n));
+}*/

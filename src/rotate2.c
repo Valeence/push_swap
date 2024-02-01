@@ -6,16 +6,16 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:43:29 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/17 16:59:54 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:20:26 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	do_rra_or_rrb(t_stack_node **stack)
+void	do_rra_or_rrb(t_stack **stack)
 {
-	t_stack_node	*prev_last;
-	t_stack_node	*last;
+	t_stack	*prev_last;
+	t_stack	*last;
 
 	if (!*stack || !(*stack)->next)
 		return ;
@@ -32,7 +32,7 @@ void	do_rra_or_rrb(t_stack_node **stack)
 	*stack = last;
 }
 
-int	rra(t_stack_node **stack)
+int	rra(t_stack **stack)
 {
 	if (!*stack || !(*stack)->next)
 		return (-1);
@@ -41,7 +41,7 @@ int	rra(t_stack_node **stack)
 	return (0);
 }
 
-int	rrb(t_stack_node **stack)
+int	rrb(t_stack **stack)
 {
 	if (!*stack || !(*stack)->next)
 		return (-1);
@@ -50,7 +50,7 @@ int	rrb(t_stack_node **stack)
 	return (0);
 }
 
-int	rrr(t_stack_node **a, t_stack_node **b)
+int	rrr(t_stack **a, t_stack **b)
 {
 	rra(a);
 	rrb(b);

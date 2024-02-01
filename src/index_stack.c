@@ -6,16 +6,16 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 22:08:35 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/24 17:07:17 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:19:33 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_stack_node	*search_index_min(t_stack_node **stack)
+t_stack	*search_index_min(t_stack **stack)
 {
-	t_stack_node	*head;
-	t_stack_node	*min_cell;
+	t_stack	*head;
+	t_stack	*min_cell;
 	int		min_so_far;
 
 	min_cell = NULL;
@@ -33,9 +33,9 @@ t_stack_node	*search_index_min(t_stack_node **stack)
 	return (min_cell);
 }
 
-void	init_lindex(t_stack_node **stack)
+void	init_lindex(t_stack **stack)
 {
-	t_stack_node	*head;
+	t_stack	*head;
 
 	head = *stack;
 	while (head)
@@ -45,9 +45,9 @@ void	init_lindex(t_stack_node **stack)
 	}
 }
 
-void	get_index(t_stack_node **stack)
+void	get_index(t_stack **stack)
 {
-	t_stack_node	*head;
+	t_stack	*head;
 	int		i;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 02:33:19 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 17:07:16 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/01 03:02:41 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,22 @@ int	check_argv(char	*str)
 	return (0);
 }
 
-void	check_duplicate(t_stack_node *stack_a, int nb)
+int	check_duplicate(t_stack*stack_a, int nb)
 {
 	if (!stack_a)
-		return ;
+		return (0);
 	while (stack_a)
 	{
 		if ((stack_a)->value == nb)
-			return (ft_printf("Error\n"), errors(&stack_a));
+			return (1);
 		stack_a = (stack_a)->next;
 	}
-	return ;
+	return (0);
 }
 
-void	free_stack(t_stack_node **stack_a, t_stack_node **stack_b)
+void	free_stack(t_stack**stack_a, t_stack**stack_b)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!stack_a || !stack_b)
 		return ;
@@ -67,13 +67,11 @@ void	free_stack(t_stack_node **stack_a, t_stack_node **stack_b)
 		free(*stack_b);
 		*stack_b = tmp;
 	}
-	*stack_a = NULL;
-	*stack_b = NULL;
 }
 
-void	free_sa(t_stack_node **stack_a)
+void	free_sa(t_stack**stack_a)
 {
-	t_stack_node	*tmp;
+	t_stack	*tmp;
 
 	if (!stack_a)
 		return ;
@@ -83,12 +81,22 @@ void	free_sa(t_stack_node **stack_a)
 		free(*stack_a);
 		*stack_a = tmp;
 	}
-	*stack_a = NULL;
+	ft_printf("Error\n");
 }
 
-void	errors(t_stack_node **stack_a)
+void	free_argv(char **argv, int j)
 {
-	ft_printf("Error\n");
-	free_sa(stack_a);
-	exit(1);
+	int	i;
+
+	i = 0;
+	if (!argv)
+		return ;
+	if (j == 1)
+		return ;
+	while (argv[i])
+	{
+		free(argv[i]);
+		i++;
+	}
+	free(argv);
 }

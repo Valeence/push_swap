@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 13:30:12 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 14:58:01 by vandre           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:34:19 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,3 +97,23 @@ char	**ft_split(char const *s, char c)
 	newstr[i] = 0;
 	return (newstr);
 }
+
+// int main()
+// {
+// 	char *str = "         Bonjour comment   ca va";
+// 	char delimiter = ' ';
+
+// 	char **result = ft_split(str, delimiter);
+// 	printf("%d\n", word_count(str, delimiter));
+// 	int i = 0;
+// 	while (result[i] != NULL)
+// 	{
+// 		printf("%s\n", result[i]);
+// 		free(result[i]); // Libérer la mémoire allouée pour chaque sous-chaîne
+// 		i++;
+// 	}
+
+// 	free(result); // Libérer la mémoire allouée pour le tableau de pointeurs
+
+// 	return 0;
+// }

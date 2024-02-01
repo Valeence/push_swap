@@ -6,15 +6,15 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 17:50:19 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/24 17:07:54 by vandre           ###   ########.fr       */
+/*   Updated: 2024/01/30 00:20:44 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	get_bit_max_list(t_stack_node **stack_a)
+int	get_bit_max_list(t_stack **stack_a)
 {
-	t_stack_node	*current;
+	t_stack	*current;
 	int				max_num;
 	int				max_bits;
 
@@ -32,11 +32,11 @@ int	get_bit_max_list(t_stack_node **stack_a)
 	return (max_bits);
 }
 
-void	radix_sort_bit(t_stack_node **stack_a,
-						t_stack_node **stack_b,
+void	radix_sort_bit(t_stack **stack_a,
+						t_stack **stack_b,
 						int bit_pos)
 {
-	t_stack_node	*current;
+	t_stack	*current;
 	int				i;
 	int				size;
 
@@ -55,7 +55,7 @@ void	radix_sort_bit(t_stack_node **stack_a,
 		pa(stack_a, stack_b);
 }
 
-void	radix_sort(t_stack_node **stack_a, t_stack_node **stack_b)
+void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	i;
 	int	max_bits;

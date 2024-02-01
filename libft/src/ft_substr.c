@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:50:03 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 14:06:01 by vandre           ###   ########.fr       */
+/*   Updated: 2023/10/20 02:14:13 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, (char *)s + start, len + 1);
 	return (str);
 }
+
+// int main(void)
+// {
+//     char *str = "Hello, world!";
+//     char *sub = ft_substr(str, 13, 5);
+//     printf("%s\n", sub); // Output: "world"
+//     free(sub);
+//     return 0;
+// }
