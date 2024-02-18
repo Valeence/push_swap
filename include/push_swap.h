@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 16:56:01 by vandre            #+#    #+#             */
-/*   Updated: 2024/02/01 00:16:58 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/16 01:03:07 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 typedef struct s_stack
 {
-	int					value;
-	int					lindex;
+	int				value;
+	int				lindex;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }				t_stack;
@@ -30,19 +30,23 @@ void	init_stack_a(t_stack **stack_a, char **argv, int i);
 int		check_argv(char	*str);
 int		check_duplicate(t_stack *stack_a, int nb);
 void	append(t_stack **stack, int nb);
-int		stack_len(t_stack *stack);
+void	len_sort(t_stack *stack_a, t_stack *stack_b);
 int		is_sorted(t_stack **stack_a);
 void	get_index(t_stack **stack);
-void 	free_stack(t_stack **stack_a, t_stack **stack_b);
+void	free_stack(t_stack **stack_a, t_stack **stack_b);
 void	free_sa(t_stack **stack_a);
 void	free_argv(char **argv, int j);
+int    stack_len(t_stack *stack);
 
 void	sort_two(t_stack **stack_a);
 void	sort_three(t_stack **stack_a);
+void	sort_four(t_stack **stack_a, t_stack **stack_b);
+void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 t_stack	*find_last(t_stack *stack_a);
-t_stack 	*find_max(t_stack *stack_a);
+t_stack	*find_max(t_stack *stack_a);
+t_stack	*find_min(t_stack *stack_a);
 
 void	sa(t_stack	**stack_a);
 void	sb(t_stack	**stack_b);

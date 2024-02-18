@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 19:10:47 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 00:21:07 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/16 01:03:15 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ t_stack	*find_last(t_stack *stack_a)
 	return (stack_a);
 }
 
-t_stack *find_max(t_stack *stack)
+t_stack	*find_max(t_stack *stack)
 {
-	t_stack *max;
+	t_stack	*max;
 
 	if (!stack)
 		return (NULL);
@@ -37,18 +37,20 @@ t_stack *find_max(t_stack *stack)
 	return (max);
 }
 
-
-int	stack_len(t_stack *stack)
+t_stack	*find_min(t_stack *stack)
 {
-	int i;
+	t_stack *min;
 
-	i = 0;
+	if (!stack)
+		return (NULL);
+	min = stack;
 	while (stack)
 	{
+		if (stack->value < min->value)
+			min = stack;
 		stack = stack->next;
-		i++;
 	}
-	return (i);
+	return (min);
 }
 
 int	is_sorted(t_stack **stack_a)
@@ -65,4 +67,17 @@ int	is_sorted(t_stack **stack_a)
 		current = current->next;
 	}
 	return (1);
+}
+
+int   stack_len(t_stack *stack)
+{
+	int i;
+
+	i = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		i++;
+	}
+	return (i);
 }

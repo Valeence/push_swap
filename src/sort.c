@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 17:50:19 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 00:20:44 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/01 14:43:21 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	get_bit_max_list(t_stack **stack_a)
 {
-	t_stack	*current;
-	int				max_num;
-	int				max_bits;
+	t_stack		*current;
+	int			max_num;
+	int			max_bits;
 
 	current = *stack_a;
 	max_num = current->lindex;
@@ -36,9 +36,9 @@ void	radix_sort_bit(t_stack **stack_a,
 						t_stack **stack_b,
 						int bit_pos)
 {
-	t_stack	*current;
-	int				i;
-	int				size;
+	t_stack		*current;
+	int			i;
+	int			size;
 
 	i = 0;
 	size = stack_len(*stack_a);
@@ -62,11 +62,7 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 
 	i = 0;
 	if (is_sorted(stack_a))
-	{
-		while (*stack_a)
-			ft_printf("%d\n", (*stack_a)->value);
 		return ;
-	}
 	max_bits = get_bit_max_list(stack_a);
 	while (i < max_bits)
 	{

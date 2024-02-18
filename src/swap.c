@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 21:40:00 by vandre            #+#    #+#             */
-/*   Updated: 2024/01/30 00:20:54 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/01 14:31:41 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	sb(t_stack **stack_b)
 {
 	t_stack	*tmp;
 
-	if (!*stack_b || !(*stack_b)->next) 
+	if (!*stack_b || !(*stack_b)->next)
 		return ;
 	tmp = (*stack_b)->next;
 	(*stack_b)->next = tmp->next;
