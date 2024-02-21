@@ -6,7 +6,7 @@
 /*   By: vandre <vandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 17:27:44 by vandre            #+#    #+#             */
-/*   Updated: 2024/02/16 01:37:30 by vandre           ###   ########.fr       */
+/*   Updated: 2024/02/19 01:25:09 by vandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	len_sort(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*tmp;
-	int	i;
+	int		i;
 
 	tmp = stack_a;
 	i = 0;
